@@ -46,9 +46,7 @@ rm -rf ~/.config/nvim/.git
 nvim
 ```
 
-:::tip
+> [!TIP]
+> It is recommended to run `:LazyHealth` after installation.
+> This will load all plugins and check if everything is working correctly.
 
-It is recommended to run `:LazyHealth` after installation.
-This will load all plugins and check if everything is working correctly.
-
-:::
