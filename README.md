@@ -4,7 +4,7 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ## What's so Special About this Starter?
-- [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has [diagnostics/linting](./lua/config/lazy.lua#L14)
+- [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save ~~and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has [diagnostics/linting](./lua/config/lazy.lua#L14)~~ (I don't have this working perfectly yet, so tsp is disabled for now)
 - [Gruvbox](https://github.com/morhetz/gruvbox) [theme](./lua/plugins/colorscheme.lua)
 - Absolute line numbers ([relative line numbers disabled](./init.lua#L11))
 - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
