@@ -48,7 +48,7 @@ nvim
 ```
 
 > [!TIP]
-> It is recommended to run `:LazyHealth` after installation.
+> It is recommended to run `:checkhealth` after installation.
 > This will load all plugins and check if everything is working correctly.
 
 I used to refer to [config notes](https://zvakanaka.github.io/#../mere-blog/posts/code/LazyVim.md) whenever setting up Neovim, but a starter started making more sense once I wanted a similar setup on multiple computers.
