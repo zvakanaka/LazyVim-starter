@@ -4,19 +4,19 @@ A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
 
 ## What's so Special About this Starter?
-- [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has diagnostics/linting.
+- [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has diagnostics/linting
 - [Gruvbox](https://github.com/morhetz/gruvbox) theme
-- Absolute line numbers (relative line numbers disabled)
+- Absolute line numbers ([relative line numbers disabled](./init.lua#L11))
 - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
 - [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
-- [Snippets](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md) file started (ready for your custom snippets)
+- [Snippets](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md) [file started](./lua/plugins/snippets.lua) (ready for your custom snippets)
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
 - [Markdown](https://www.youtube.com/watch?v=5ht8NYkU9wQ) setup [with conceal](https://github.com/epwalsh/obsidian.nvim)
 - [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode) `:TableModeToggle` to enter table mode (formats markdown tables)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) history and window resizing works with `Alt-<Arrow-Keys>` (for MacOS compatibility)
-- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with `<C-\>`
+- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-\>`](./lua/plugins/toggleterm.lua)
 - [tint.nvim](https://github.com/levouh/tint.nvim)
-- [TabbyML](https://github.com/TabbyML/tabby) (optional)
+- [TabbyML](https://github.com/TabbyML/tabby) ([optional](./lua/plugins/tabby.lua))
 
 ## [Installation](https://www.lazyvim.org/installation)
 
