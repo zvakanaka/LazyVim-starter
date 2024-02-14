@@ -2,3 +2,53 @@
 
 A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
 Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+
+## What's so Special About this Starter?
+- [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has diagnostics/linting.
+- [Gruvbox](https://github.com/morhetz/gruvbox) theme
+- Absolute line numbers (relative line numbers disabled)
+- [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
+- [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
+- [Snippets](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md) file started (ready for your custom snippets)
+- [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)
+- [Markdown](https://www.youtube.com/watch?v=5ht8NYkU9wQ) setup [with conceal](https://github.com/epwalsh/obsidian.nvim)
+- [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode) `:TableModeToggle` to enter table mode (formats markdown tables)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim) history and window resizing works with `Alt-<Arrow-Keys>` (for MacOS compatibility)
+- [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with `<C-\>`
+- [tint.nvim](https://github.com/levouh/tint.nvim)
+- [TabbyML](https://github.com/TabbyML/tabby) (optional)
+
+## [Installation](https://www.lazyvim.org/installation)
+
+- Make a backup of your current Neovim files:
+```sh
+# required
+mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+```
+
+- Clone the starter
+```sh
+git clone https://github.com/zvakanaka/LazyVim-starter ~/.config/nvim
+```
+
+- Remove the .git folder, so you can add it to your own repo later
+```sh
+rm -rf ~/.config/nvim/.git
+```
+
+- Start Neovim!
+```sh
+nvim
+```
+
+:::tip
+
+It is recommended to run `:LazyHealth` after installation.
+This will load all plugins and check if everything is working correctly.
+
+:::

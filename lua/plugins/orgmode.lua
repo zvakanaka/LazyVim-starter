@@ -1,3 +1,7 @@
+-- disabling this file since markdown setup does not look good (affects all md files - until I figure out how to disable it for files not in ~/orgfiles)
+-- stylua: ignore
+if true then return {} end
+
 return {
   "nvim-orgmode/orgmode",
   dependencies = {
