@@ -5,7 +5,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## What's so Special About this Starter?
 - [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has [diagnostics/linting](./lua/config/lazy.lua#L14)
-- [Gruvbox](https://github.com/morhetz/gruvbox) theme
+- [Gruvbox](https://github.com/morhetz/gruvbox) [theme](./lua/plugins/colorscheme.lua)
 - Absolute line numbers ([relative line numbers disabled](./init.lua#L11))
 - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim)
 - [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
@@ -51,3 +51,4 @@ nvim
 > It is recommended to run `:LazyHealth` after installation.
 > This will load all plugins and check if everything is working correctly.
 
+I used to refer to [config notes](https://zvakanaka.github.io/#../mere-blog/posts/code/LazyVim.md) whenever setting up Neovim, but a starter started making more sense once I wanted a similar setup on multiple computers.
