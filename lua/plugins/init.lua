@@ -1,13 +1,9 @@
 return {
-  "f-person/git-blame.nvim",
-  "dhruvasagar/vim-table-mode", -- :TableModeToggle to enter table mode
   {
-    "ruifm/gitlinker.nvim",
-    -- fork with updated features/bugs:
-    -- 'linrongbin16/gitlinker.nvim',
-    config = function()
-      require("gitlinker").setup()
-    end,
+    "dhruvasagar/vim-table-mode",
+    keys = {
+      { "<leader>sx", "<cmd>TableModeToggle<cr>", desc = "Table Mode Toggle" },
+    },
   },
   {
     "levouh/tint.nvim",

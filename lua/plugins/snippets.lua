@@ -6,10 +6,15 @@ local t = ls.text_node
 local i = ls.insert_node
 
 ls.add_snippets("javascript", {
-  s("console", {
+  s("clog", {
     t({ "console.log(" }),
     i(1),
     t({ ")" }),
+  }),
+  s("lobj", {
+    t({ "console.log({" }),
+    i(1),
+    t({ "})" }),
   }),
 })
 

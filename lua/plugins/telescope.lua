@@ -23,7 +23,25 @@ return {
       "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>",
       desc = "Switch Buffer",
     },
-    { "<leader>/", Util.telescope("live_grep"), desc = "Grep (root dir)" },
+    {
+      "<leader>/",
+      -- additional args are in rg format https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md
+      Util.telescope("live_grep", {
+        additional_args = {
+          "--glob=!*.json",
+          "--glob=!*mock*",
+          "--glob=!*test*",
+          "--glob=!*stories*",
+          "--glob=!*.mdx",
+        },
+      }),
+      desc = "Grep (root dir)",
+    },
+    {
+      "<leader>?",
+      Util.telescope("live_grep", { additional_args = {} }),
+      desc = "Grep (root dir)",
+    },
     { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
     { "<leader><space>", Util.telescope("files"), desc = "Find Files (root dir)" },
     -- find
@@ -52,7 +70,7 @@ return {
     { "<leader>sM", "<cmd>Telescope man_pages<cr>", desc = "Man Pages" },
     { "<leader>sm", "<cmd>Telescope marks<cr>", desc = "Jump to Mark" },
     { "<leader>so", "<cmd>Telescope vim_options<cr>", desc = "Options" },
-    { "<leader>sR", "<cmd>Telescope resume<cr>", desc = "Resume" },
+    { "<leader>se", "<cmd>Telescope resume<cr>", desc = "Resume (repeat last search)" },
     { "<leader>sw", Util.telescope("grep_string", { word_match = "-w" }), desc = "Word (root dir)" },
     { "<leader>sW", Util.telescope("grep_string", { cwd = false, word_match = "-w" }), desc = "Word (cwd)" },
     { "<leader>sw", Util.telescope("grep_string"), mode = "v", desc = "Selection (root dir)" },
