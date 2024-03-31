@@ -35,12 +35,21 @@ return {
           "--glob=!*.mdx",
         },
       }),
-      desc = "Grep (root dir)",
+      desc = "Grep main files (root dir)",
     },
     {
       "<leader>?",
-      Util.telescope("live_grep", { additional_args = {} }),
-      desc = "Grep (root dir)",
+      -- additional args are in rg format https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md
+      Util.telescope("live_grep", {
+        additional_args = {
+          "--glob=*.json",
+          "--glob=*mock*",
+          "--glob=*test*",
+          "--glob=*stories*",
+          "--glob=*.mdx",
+        },
+      }),
+      desc = "Grep tests/mock/stories/json (root dir)",
     },
     { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
     { "<leader><space>", Util.telescope("files"), desc = "Find Files (root dir)" },
