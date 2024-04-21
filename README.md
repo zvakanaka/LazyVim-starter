@@ -19,7 +19,16 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) [history](./lua/plugins/telescope.lua#L123-L125) and [window resizing](/lua/config/keymaps.lua#L12-L15) works with `Alt-<Arrow-Keys>` (for MacOS compatibility)
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-\>`](./lua/plugins/toggleterm.lua) to toggle bottom terminal
 - [tint.nvim](https://github.com/levouh/tint.nvim) to tint non-focused windows
-- [TabbyML](https://github.com/TabbyML/tabby) self-hosted AI coding assistant ([requires running Tabby - this plugin is gracefully ignored if you don't have Tabby running](./lua/plugins/tabby.lua))
+- [Copilot](https://github.com/github/copilot.vim) with the accept keybind as `<C-CR>`
+- [Silicone](https://github.com/michaelrommel/nvim-silicon) selected code to image in clipboard using the external [silicon](https://github.com/Aloxaf/silicon) tool
+- [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
+
+### Disabled by Default
+- [TabbyML](https://github.com/TabbyML/tabby) self-hosted AI coding assistant ([requires running Tabby - this plugin does nothing if you don't have Tabby running](./lua/plugins/tabby.lua))
+- [kitty-scrollback](https://github.com/mikesmithgh/kitty-scrollback.nvim) - [scrollback](./lua/plugins/kitty-scrollback.lua) in [kitty](https://sw.kovidgoyal.net/kitty/)
+- [openscad.nvim](https://github.com/salkin-mada/openscad.nvim) - [OpenSCAD](https://www.openscad.org/) plugin
+- [orgmode.nvim](https://github.com/nvim-orgmode/orgmode) - [orgmode](https://orgmode.org/) plugin
+- [hardtime.nvim](https://github.com/m4xshen/hardtime.nvim) - [hardtime](./lua/plugins/hardtime.lua) to help teach good command workflow
 
 ## [Installation](https://www.lazyvim.org/installation)
 
