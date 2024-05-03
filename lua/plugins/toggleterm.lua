@@ -2,12 +2,37 @@ return {
   {
     "akinsho/toggleterm.nvim",
     version = "*",
-    config = true,
+    config = function()
+      require("toggleterm").setup({
+        persist_mode = false,
+        start_in_insert = true,
+      })
+    end,
     keys = {
       {
-        [[<C-\>]],
+        [[<C-/>]],
         "<cmd>ToggleTerm size=10 direction=horizontal<cr>",
-        desc = "Open a horizontal terminal at the Desktop directory",
+        desc = "Open a horizontal terminal at the current directory",
+      },
+      {
+        [[<C-\>]],
+        "<cmd>ToggleTerm direction=float<cr>",
+        desc = "Open a floating terminal at the current directory",
+      },
+      {
+        [[<C-S-/>]],
+        "<cmd>ToggleTerm size=80 direction=vertical<cr>",
+        desc = "Open a vertical terminal at the current directory",
+      },
+      {
+        "<leader>tt",
+        "<cmd>TermExec cmd='npm test %:r.test.js' direction=vertical size=80 name='Run npm test Associated with This File'<cr>",
+        desc = "Run npm test associated with the current file",
+      },
+      {
+        "<leader>tb",
+        "<cmd>TermExec cmd='bump && sleep 3; exit' direction=vertical size=80 name='bump-package-json-version-script'<cr>",
+        desc = "Update the package json version to match the changelog of the current package",
       },
     },
   },

@@ -11,8 +11,12 @@ return {
     }, { mode = "i", expr = true, replace_keycodes = false })
 
     wk.register({
-      ["<C-L>"] = { '<Plug>(copilot-accept-word)', "Accept Copilot word" }
-    }, { mode = "i"})
+      ["<C-L>"] = { "<Plug>(copilot-accept-word)", "Accept Copilot word" },
+    }, { mode = "i" })
+
+    wk.register({
+      ["<C-/>"] = { "<Plug>(copilot-accept-line)", "Accept Copilot line" },
+    }, { mode = "i" })
 
     vim.g.copilot_no_tab_map = true
   end,
