@@ -30,8 +30,13 @@ return {
         desc = "Run npm test associated with the current file",
       },
       {
+        "<leader>tT",
+        "<cmd>TermExec cmd='npm test %:h' direction=vertical size=80 name='Run npm test Associated with This File'<cr>",
+        desc = "Run npm test associated with the directory containing the current file",
+      },
+      {
         "<leader>tb",
-        "<cmd>TermExec cmd='bump && sleep 3; exit' direction=vertical size=80 name='bump-package-json-version-script'<cr>",
+        "<cmd>TermExec cmd='bump && git add . && git commit --no-verify -m \"bump version and update changelog\"; sleep 4; exit' direction=vertical size=80 name='bump-package-json-version-script'<cr>",
         desc = "Update the package json version to match the changelog of the current package",
       },
     },

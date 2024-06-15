@@ -1,6 +1,7 @@
 -- adapted from full spec at https://www.lazyvim.org/plugins/ui#bufferlinenvim
 return {
   "akinsho/bufferline.nvim",
+  dependencies = { "echasnovski/mini.bufremove" },
   event = "VeryLazy",
   keys = {
     { "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", desc = "Toggle Pin" },
