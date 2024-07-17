@@ -10,28 +10,28 @@ return {
   -- stylua: ignore
   keys = {
     {
-      "<leader>sR",
+      "<leader>pR",
       function()
         require("spectre").open_visual({ select_word = true, path = path })
       end,
       desc = "Replace current word in files (Spectre)",
     },
     {
-      "<leader>sr",
+      "<leader>pr",
       function()
         require("spectre").open_visual({ path = path })
       end,
       desc = "Replace in files (Spectre)",
     },
     {
-      "<leader>sP",
+      "<leader>pP",
       function()
         require("spectre").open_file_search({ select_word = true })
       end,
       desc = "Replace current word in current file (Spectre)",
     },
     {
-      "<leader>sp",
+      "<leader>pp",
       function()
         require("spectre").open_file_search()
       end,

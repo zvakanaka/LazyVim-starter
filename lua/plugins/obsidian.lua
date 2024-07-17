@@ -17,16 +17,16 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
-    workspaces = {
-      {
-        name = "personal",
-        path = "~/dev/Vault/Practice",
-      },
-      {
-        name = "work",
-        path = "~/dev/Vault/Work",
-      },
-    },
+    -- workspaces = {
+    --   {
+    --     name = "personal",
+    --     path = "~/dev/Vault/Practice",
+    --   },
+    --   {
+    --     name = "work",
+    --     path = "~/dev/Vault/Work",
+    --   },
+    -- },
 
     -- see below for full list of options 👇
   },

@@ -5,18 +5,19 @@ return {
   "github/copilot.vim",
   init = function()
     local wk = require("which-key")
+wk.add( {
+    { "<C-CR>", 'copilot#Accept("\\<CR>")', desc = "Accept Copilot suggestion", expr = true, mode = "i", replace_keycodes = false },
+  })
 
-    wk.register({
-      ["<C-CR>"] = { 'copilot#Accept("\\<CR>")', "Accept Copilot suggestion" },
-    }, { mode = "i", expr = true, replace_keycodes = false })
+    wk.add(
+  {
+    { "<C-L>", "<Plug>(copilot-accept-word)", desc = "Accept Copilot word", mode = "i" },
+  }
+)
 
-    wk.register({
-      ["<C-L>"] = { "<Plug>(copilot-accept-word)", "Accept Copilot word" },
-    }, { mode = "i" })
-
-    wk.register({
-      ["<C-/>"] = { "<Plug>(copilot-accept-line)", "Accept Copilot line" },
-    }, { mode = "i" })
+    wk.add({
+    { "<C-/>", "<Plug>(copilot-accept-line)", desc = "Accept Copilot line", mode = "i" },
+  })
 
     vim.g.copilot_no_tab_map = true
   end,

@@ -13,7 +13,7 @@ return {
     },
     init = function()
       local wk = require("which-key")
-      wk.register({ ["<leader>C"] = { ":CopilotChat<CR>", "Open Copilot Chat Window" } }, { mode = { "n", "v" } })
+      wk.add({ "<leader>C", ":CopilotChat<CR>", desc = "Open Copilot Chat Window", mode = { "n", "v" } })
     end,
   },
 }
