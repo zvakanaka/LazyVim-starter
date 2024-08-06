@@ -25,7 +25,7 @@ return {
         desc = "Open a vertical terminal at the current directory",
       },
       {
-        "<leader>tt",
+        "<leader>te",
         "<cmd>TermExec cmd='npm test %:r.test.js' direction=vertical size=80 name='Run npm test Associated with This File'<cr>",
         desc = "Run npm test associated with the current file",
       },
