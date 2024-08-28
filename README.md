@@ -13,13 +13,11 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) to highlight CSS [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
 - [Markdown](https://www.youtube.com/watch?v=5ht8NYkU9wQ) setup [with obsidian](https://github.com/epwalsh/obsidian.nvim) and [conceal](./after/ftplugin/markdown.lua)
 - [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode) `:TableModeToggle` to enter table mode (formats markdown tables)
-- [Spectre](https://github.com/nvim-pack/nvim-spectre) for search/replace (with option for replace on [on current word](./lua/plugins/spectre.lua))
 - [Snippets](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md) [file started](./lua/plugins/snippets.lua) (ready for more custom snippets)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) [history](./lua/plugins/telescope.lua#L123-L125) and [window resizing](/lua/config/keymaps.lua#L12-L15) works with `Alt-<Arrow-Keys>` (for MacOS compatibility)
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-/>`](./lua/plugins/toggleterm.lua) to toggle bottom terminal, `<C-S-/>` for right side terminal
 - [tint.nvim](https://github.com/levouh/tint.nvim) to tint non-focused windows
 - [Copilot](https://github.com/github/copilot.vim) with the accept keybind as `<C-CR>`
-- [Silicone](https://github.com/michaelrommel/nvim-silicon) selected code to image in clipboard using the external [silicon](https://github.com/Aloxaf/silicon) tool
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
 
 ## [Installation](https://www.lazyvim.org/installation)
