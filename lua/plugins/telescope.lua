@@ -1,5 +1,16 @@
 return {
   "nvim-telescope/telescope.nvim",
+  opts = {
+    defaults = {
+      wrap_results = true,
+      layout_config = {
+        horizontal = {
+          width = 0.95,
+          preview_width = 0.65,
+        },
+      },
+    },
+  },
   keys = {
     {
       "<leader>/",
