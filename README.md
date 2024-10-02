@@ -11,9 +11,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - Automatic updates disabled (`<leader>l` then `U` to update manually)
 - Git plugins - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim) (`<leader>gy` to yank link to file) and [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) to highlight CSS [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
-- [Markdown](https://www.youtube.com/watch?v=5ht8NYkU9wQ) setup [with obsidian](https://github.com/epwalsh/obsidian.nvim) and [conceal](./after/ftplugin/markdown.lua)
-- [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode) `:TableModeToggle` to enter table mode (formats markdown tables)
-- [Snippets](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md) [file started](./lua/plugins/snippets.lua) (ready for more custom snippets)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim) [history](./lua/plugins/telescope.lua#L123-L125) and [window resizing](/lua/config/keymaps.lua#L12-L15) works with `Alt-<Arrow-Keys>` (for MacOS compatibility)
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-/>`](./lua/plugins/toggleterm.lua) to toggle bottom terminal, `<C-S-/>` for right side terminal
 - [tint.nvim](https://github.com/levouh/tint.nvim) to tint non-focused windows
@@ -23,6 +20,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## [Installation](https://www.lazyvim.org/installation)
 
 - Make a backup of your current Neovim files:
+
 ```sh
 # required
 mv ~/.config/nvim{,.bak}
@@ -34,16 +32,19 @@ mv ~/.cache/nvim{,.bak}
 ```
 
 - Clone the starter
+
 ```sh
 git clone https://github.com/zvakanaka/LazyVim-starter ~/.config/nvim
 ```
 
 - Remove the .git folder, so you can add it to your own repo later
+
 ```sh
 rm -rf ~/.config/nvim/.git
 ```
 
 - Start Neovim!
+
 ```sh
 nvim
 ```
