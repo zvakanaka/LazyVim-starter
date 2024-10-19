@@ -17,6 +17,12 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [Copilot](https://github.com/github/copilot.vim) with the accept keybind as `<C-CR>`
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
 
+## Screenshots
+
+![overview](./README-img/overview.png)
+
+![wider telescope](./README-img/wider-telescope.png)
+
 ## [Installation](https://www.lazyvim.org/installation)
 
 - Make a backup of your current Neovim files:
