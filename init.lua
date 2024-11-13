@@ -27,3 +27,23 @@ local function copyJsonPath()
   vim.api.nvim_command("let @+ = '" .. path .. "'")
 end
 vim.keymap.set("n", "<leader>nn", copyJsonPath)
+
+local function dailyNote()
+  local filename = "~/dev/Vault/Work/" .. os.date("%B %d, %Y") .. ".md"
+  vim.cmd("e " .. filename)
+end
+vim.keymap.set("n", "<leader>nd", dailyNote)
+
+-- change link into markdown link (e.g. url -> [](url)) and place cursor between brackets
+vim.keymap.set("n", "<leader>ml", "viWda[](<esc>pa)<esc>F[a", {
+  desc = "Change link into markdown link",
+})
+
+-- insert markdown checkbox at beginning of line
+vim.keymap.set("n", "<leader>mc", "I- [ ] <esc>", {
+  desc = "Insert markdown checkbox",
+})
+-- check checkbox of current line
+vim.keymap.set("n", "<leader>mt", "^3<right>rx<esc>", {
+  desc = "Check markdown checkbox",
+})
