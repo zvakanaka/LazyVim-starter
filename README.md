@@ -11,17 +11,15 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - Automatic updates disabled (`<leader>l` then `U` to update manually)
 - Git plugins - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim) (`<leader>gy` to yank link to file) and [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) to highlight CSS [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
-- [Telescope](https://github.com/nvim-telescope/telescope.nvim) [history](./lua/plugins/telescope.lua#L123-L125) and [window resizing](/lua/config/keymaps.lua#L12-L15) works with `Alt-<Arrow-Keys>` (for MacOS compatibility)
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-/>`](./lua/plugins/toggleterm.lua) to toggle bottom terminal, `<C-S-/>` for right side terminal
 - [tint.nvim](https://github.com/levouh/tint.nvim) to tint non-focused windows
 - [Copilot](https://github.com/github/copilot.vim) with the accept keybind as `<C-CR>`
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
+- [md-pdf.nvim](https://github.com/arminveres/md-pdf.nvim) and [img-clip.nvim](https://github.com/HakonHarnes/img-clip.nvim) for markdown preview/export (`<leader>mp`) and image pasting (`<leader>v`)
 
 ## Screenshots
 
 ![overview](./README-img/overview.png)
-
-![wider telescope](./README-img/wider-telescope.png)
 
 ## [Installation](https://www.lazyvim.org/installation)
 
