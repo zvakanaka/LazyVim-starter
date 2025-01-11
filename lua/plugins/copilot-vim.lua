@@ -15,6 +15,17 @@ return {
         replace_keycodes = false,
       },
     })
+    -- also accept with alt+a
+    wk.add({
+      {
+        "<A-a>",
+        'copilot#Accept("\\<CR>")',
+        desc = "Accept Copilot suggestion",
+        expr = true,
+        mode = "i",
+        replace_keycodes = false,
+      },
+    })
 
     wk.add({
       { "<C-L>", "<Plug>(copilot-accept-word)", desc = "Accept Copilot word", mode = "i" },

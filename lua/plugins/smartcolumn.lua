@@ -19,6 +19,7 @@ return {
       "fish",
       "zsh",
       "json",
+      "snacks_dashboard",
     },
   },
 }
