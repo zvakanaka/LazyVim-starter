@@ -15,15 +15,27 @@ return {
         replace_keycodes = false,
       },
     })
-
+    -- same as above but with alt + a (and override the default behavior)
+    wk.add({
+      {
+        "<A-a>",
+        'copilot#Accept("\\<CR>")',
+        desc = "Accept Copilot suggestion",
+        expr = true,
+        mode = "i",
+        replace_keycodes = false,
+      },
+    })
     wk.add({
       { "<C-L>", "<Plug>(copilot-accept-word)", desc = "Accept Copilot word", mode = "i" },
     })
-
+    
     wk.add({
       { "<C-/>", "<Plug>(copilot-accept-line)", desc = "Accept Copilot line", mode = "i" },
     })
 
+    
+    
     vim.g.copilot_no_tab_map = true
   end,
 }

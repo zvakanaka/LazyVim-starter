@@ -6,6 +6,14 @@ return {
     inlay_hints = { enabled = false },
     servers = { eslint = {} },
     setup = {
+      -- deno
+      deno = function()
+        require("lspconfig").deno.setup({
+          cmd = { "deno", "lsp" },
+          filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+          root_dir = require("lspconfig/util").root_pattern("deno.json", "tsconfig.json", ".git"),
+        })
+      end,
       eslint = function()
         require("lazyvim.util").lsp.on_attach(function(client)
           if client.name == "eslint" then
