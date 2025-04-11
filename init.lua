@@ -124,6 +124,20 @@ vim.keymap.set("n", "<leader>to", testOnly, {
 })
 
 -- open new kitty window and yarn test current file
-vim.keymap.set("n", "<leader>tt", ":!kitty @ launch --cwd current npm test %<cr>", {
+vim.keymap.set("n", "<leader>tt", ":!kitty @ launch --cwd current yarn test %<cr>", {
   desc = "Open new kitty window and yarn test current file",
+})
+
+-- toggle LSP
+vim.keymap.set("n", "<leader>ue", function()
+  local clients = vim.lsp.get_active_clients()
+  if next(clients) then
+    vim.cmd("LspStop")
+    vim.cmd("echo 'LSP stopped'")
+  else
+    vim.cmd("echo 'LSP starting'")
+    vim.cmd("LspStart")
+  end
+end, {
+  desc = "Toggle LSP",
 })
