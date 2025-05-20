@@ -4,6 +4,7 @@ require("config.lazy")
 -- https://medium.com/usevim/changing-vims-title-713001d4049c
 -- https://www.imaginaryrobots.net/posts/2021-04-17-converting-vimrc-to-lua/
 vim.opt.title = true
+-- 
 vim.opt.titlestring = "%-25.55F %a%r%m"
 vim.opt.titlelen = 70
 
@@ -37,6 +38,26 @@ vim.keymap.set("n", "<leader>nd", dailyNote)
 -- change link into markdown link (e.g. url -> [](url)) and place cursor between brackets (use register 'p')
 vim.keymap.set("n", "<leader>ml", 'viW"pda[](<esc>"ppa)<esc>F[a', {
   desc = "Change link into markdown link",
+})
+
+-- change visual selection into markdown link (e.g. selected text -> [selected text]())
+vim.keymap.set("v", "<leader>ml", '"pda[<esc>"ppa]()<left>', {
+  desc = "Change visual selection into markdown link",
+})
+
+-- delete mark (e.g. <leader>dm a)
+vim.keymap.set("n", "<leader>dm", function()
+  local mark = vim.fn.getchar()
+  ---@diagnostic disable-next-line param-type-mismatch
+  mark = string.char(mark)
+  if mark ~= "" then
+    vim.cmd("echom 'Mark: " .. mark .. "'")
+    vim.cmd("delmark " .. mark)
+  else
+    vim.cmd("echom 'Invalid mark: " .. mark .. "'")
+  end
+end, {
+  desc = "Delete mark",
 })
 
 -- insert markdown checkbox at beginning of line
