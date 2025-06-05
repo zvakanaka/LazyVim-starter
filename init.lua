@@ -98,8 +98,6 @@ local function testOnly()
   local replaced = false
   -- loop through lines above cursor
 
-  -- for i = 1, vim.fn.line(".") - 1, -1 do
-  -- loop through lines above cursor in a different way
   for i = vim.fn.line("."), 1, -1 do
     local line = vim.fn.getline(i)
     -- if .only is already present, remove it
