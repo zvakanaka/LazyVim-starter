@@ -162,3 +162,12 @@ vim.keymap.set("n", "<leader>ue", function()
 end, {
   desc = "Toggle LSP",
 })
+
+-- copy current file path to clipboard
+vim.keymap.set("n", "<leader>cp", function()
+  local file_path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", file_path)
+  vim.cmd("echo 'Copied file path: " .. file_path .. "'")
+end, {
+  desc = "Copy current file path to clipboard",
+})
