@@ -59,6 +59,66 @@ nvim
 
 I used to refer to [config notes](https://zvakanaka.github.io/#../mere-blog/posts/code/LazyVim.md) whenever setting up Neovim, but a starter started making more sense once I wanted a similar setup on multiple computers.
 
+## [VSCode Neovim](https://github.com/asvetliakov/vscode-neovim) (optional)
+
+Sometimes you may have a reason to use VS Code.
+
+This VS Code extension allows using Neovim inside VS Code, Neovim UI doesn't work in it (Neovim plugin dialogs and such) so you may want to set up some keybindings to map VS Code's commands for its UI to LazyVim keybindings.
+
+To get lazygit working, you can use the [lazygit VS Code extension](https://github.com/Chaitanya-Shahare/lazygit-for-vscode). Below is a keybinding to map it to `<space>gg` (to be consistent with LazyVim's `<leader>gg`).
+
+```json
+[
+  {
+    "key": "ctrl+s",
+    "command": "vscode-neovim.lua",
+    "args": ["vim.cmd.stopinsert()", "vim.cmd.write()"],
+    "when":"editorTextFocus"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when":"editorTextFocus && neovim.mode != insert"
+  },
+  {
+    "key": "space g g",
+    "command": "lazygit.openLazygit",
+    "when": "editorTextFocus && neovim.mode != insert"
+  },
+  {
+    "key": "space space",
+    "command": "workbench.action.quickOpen",
+    "when": "editorTextFocus && neovim.mode != insert"
+  },
+  {
+    "key": "space /",
+    "command": "workbench.action.findInFiles",
+    "when": "editorTextFocus && neovim.mode != insert"
+  },
+  {
+    "key": "space a",
+    "command": "workbench.action.chat.openAgent",
+    "when": "editorTextFocus && neovim.mode != insert && config.chat.agent.enabled && !chatSetupDisabled && !chatSetupHidden"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown"
+  }
+]
+```
+
 ## Troubleshooting
 
 If Copilot stops working and you recently set up another IDE, remove the `~/.config/github-copilot` folder and run `:Copilot setup` again (see .[bug](https://github.com/orgs/community/discussions/152171#discussioncomment-12324088)).
