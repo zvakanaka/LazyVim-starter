@@ -65,7 +65,10 @@ Sometimes you may have a reason to use VS Code.
 
 This VS Code extension allows using Neovim inside VS Code, Neovim UI doesn't work in it (Neovim plugin dialogs and such) so you may want to set up some keybindings to map VS Code's commands for its UI to LazyVim keybindings.
 
-To get lazygit working, you can use the [lazygit VS Code extension](https://github.com/Chaitanya-Shahare/lazygit-for-vscode). Below is a keybinding to map it to `<space>gg` (to be consistent with LazyVim's `<leader>gg`).
+To get lazygit working, you can use the [lazygit VS Code extension](https://github.com/Chaitanya-Shahare/lazygit-for-vscode). In the keybindings below, there is one to map it to `<space>gg` (to be consistent with LazyVim's `<leader>gg`).
+
+<detail>
+  <summary>VS Code Keybindings</summary>
 
 ```json
 [
@@ -118,6 +121,8 @@ To get lazygit working, you can use the [lazygit VS Code extension](https://gith
   }
 ]
 ```
+
+</detail>
 
 ## Troubleshooting
 

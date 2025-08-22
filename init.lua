@@ -150,14 +150,14 @@ vim.keymap.set("n", "<leader>tt", ":!kitty @ launch --cwd current yarn test %<cr
 -- toggle LSP
 vim.keymap.set("n", "<leader>ue", function()
   local clients = vim.lsp.get_clients()
-  for _, client in pairs(clients) do
-    vim.lsp.stop_client(client.id)
-  end
   if #clients > 0 then
+    -- Stop all clients and reload buffer (official recommended approach)
+    vim.lsp.stop_client(vim.lsp.get_clients())
     vim.cmd("echo 'LSP stopped'")
   else
+    -- Reload the buffer to restart LSP
+    vim.cmd("edit")
     vim.cmd("echo 'LSP starting'")
-    vim.cmd("LspStart")
   end
 end, {
   desc = "Toggle LSP",
