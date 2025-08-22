@@ -67,7 +67,7 @@ This VS Code extension allows using Neovim inside VS Code, Neovim UI doesn't wor
 
 To get lazygit working, you can use the [lazygit VS Code extension](https://github.com/Chaitanya-Shahare/lazygit-for-vscode). In the keybindings below, there is one to map it to `<space>gg` (to be consistent with LazyVim's `<leader>gg`).
 
-<detail>
+<details>
   <summary>VS Code Keybindings</summary>
 
 ```json
@@ -122,8 +122,8 @@ To get lazygit working, you can use the [lazygit VS Code extension](https://gith
 ]
 ```
 
-</detail>
+</details>
 
 ## Troubleshooting
 
-If Copilot stops working and you recently set up another IDE, remove the `~/.config/github-copilot` folder and run `:Copilot setup` again (see .[bug](https://github.com/orgs/community/discussions/152171#discussioncomment-12324088)).
+If Copilot stops working and you recently set up another IDE, remove the `~/.config/github-copilot` folder and run `:Copilot setup` again (see [bug](https://github.com/orgs/community/discussions/152171#discussioncomment-12324088)).
