@@ -6,7 +6,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## What's so Special About this Starter?
 
 - [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has [diagnostics/linting](./lua/config/lazy.lua#L14) with its [formatting disabled](./lua/plugins/lspconfig.lua)
-- [Gruvbox](https://github.com/morhetz/gruvbox) [theme](./lua/plugins/colorscheme.lua) (I think it's comfortable on the eyes)
+- [Gruvbox](https://github.com/morhetz/gruvbox) theme - I think it's comfortable on the eyes (customize [here](./lua/plugins/colorscheme.lua))
 - Absolute line numbers ([relative line numbers disabled](./init.lua#L11))
 - Automatic updates disabled (`<leader>l` then `U` to update manually)
 - Git plugins - [gitlinker.nvim](https://github.com/ruifm/gitlinker.nvim) (`<leader>gy` to yank link to file) and [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
@@ -63,7 +63,7 @@ I used to refer to [config notes](https://zvakanaka.github.io/#../mere-blog/post
 
 Sometimes you may have a reason to use VS Code.
 
-This VS Code extension allows using Neovim inside VS Code, Neovim UI doesn't work in it (Neovim plugin dialogs and such) so you may want to set up some keybindings to map VS Code's commands for its UI to LazyVim keybindings.
+[This](https://github.com/asvetliakov/vscode-neovim) VS Code extension allows using Neovim inside VS Code, but keep in mind that Neovim UI still won't work in VS Code (Neovim plugin dialogs and such), so you may want to set up some keybindings to map VS Code's commands for its UI to LazyVim keybindings (my keybindings are below).
 
 To get lazygit working, you can use the [lazygit VS Code extension](https://github.com/Chaitanya-Shahare/lazygit-for-vscode). In the keybindings below, there is one to map it to `<space>gg` (to be consistent with LazyVim's `<leader>gg`).
 
