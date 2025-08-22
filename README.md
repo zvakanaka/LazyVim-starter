@@ -68,7 +68,9 @@ Sometimes you may have a reason to use VS Code.
 To get lazygit working, you can use the [lazygit VS Code extension](https://github.com/Chaitanya-Shahare/lazygit-for-vscode). In the keybindings below, there is one to map it to `<space>gg` (to be consistent with LazyVim's `<leader>gg`).
 
 <details>
-  <summary>VS Code Keybindings</summary>
+  <summary>VS Code Keybindings (click to expand)</summary>
+
+[Keybindings can be configured](https://stackoverflow.com/questions/33791097/how-can-i-change-keyboard-shortcut-bindings-in-visual-studio-code) in `keybindings.json` (open command palette with `Ctrl+Shift+P` and search for "Preferences: Open Keyboard Shortcuts (JSON)").
 
 ```json
 [
