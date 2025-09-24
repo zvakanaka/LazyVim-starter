@@ -50,3 +50,21 @@ vim.keymap.set("i", "<C-k>", function()
   return "<C-o>dw"
 end, { silent = true, expr = true })
 vim.keymap.set("c", "<C-k>", "<C-f>d$<C-c><End>", { silent = true })
+
+-- TODO: support Linux as well
+if vim.fn.has("macunix") == 1 then
+  -- toggle light/dark mode override to integrate with macOS system appearance and auto-dark-mode
+  vim.keymap.del("n", "<leader>ub", { silent = true })
+  vim.keymap.set("n", "<leader>ub", function()
+    local currentBackground = vim.api.nvim_get_option_value("background", {})
+    if currentBackground == "dark" then
+      os.execute(
+        "osascript -e 'tell application \"System Events\" to tell appearance preferences to set dark mode to false'"
+      )
+      return
+    end
+    os.execute(
+      "osascript -e 'tell application \"System Events\" to tell appearance preferences to set dark mode to true'"
+    )
+  end, { desc = "Toggle colorcheme" })
+end
