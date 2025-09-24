@@ -6,7 +6,7 @@ return {
     priority = 1000,
     config = function()
       require("tokyonight").setup({
-        transparent = true,
+        -- transparent = true, -- causes problems with bufferline.nvim: https://github.com/akinsho/bufferline.nvim/issues?q=is%3Aissue%20white%20background
       })
     end,
   },
@@ -16,9 +16,7 @@ return {
     priority = 1000,
     config = function()
       require("gruvbox").setup({
-        style = "light",
-        -- not working with light for some reason:
-        -- transparent_mode = true,
+        -- transparent_mode = true, -- causes problems with bufferline.nvim (this is fixable, so maybe later)
       })
     end,
   },
@@ -32,7 +30,8 @@ return {
         set_dark_mode = function()
           vim.cmd("echom '🕯️Dark mode'")
           vim.api.nvim_set_option_value("background", "dark", {})
-          vim.cmd("colorscheme tokyonight")
+          vim.cmd("colorscheme gruvbox")
+          -- vim.cmd("colorscheme tokyonight")
         end,
         set_light_mode = function()
           vim.cmd("echom '☀️ Light mode'")

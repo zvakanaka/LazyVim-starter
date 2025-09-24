@@ -46,6 +46,7 @@ return {
           text_align = "left",
         },
       },
+      separator_style = "slant",
     },
   },
   config = function(_, opts)
