@@ -1,3 +1,7 @@
+-- disable until I get this config working well with Lazygit
+if true then
+  return {}
+end
 return {
   "miversen33/sunglasses.nvim",
   config = {
