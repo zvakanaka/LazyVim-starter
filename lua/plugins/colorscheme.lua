@@ -1,15 +1,15 @@
 -- NOTE: Cursor color is something you set in your terminal emulator.
 return {
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("tokyonight").setup({
-        -- transparent = true, -- causes problems with bufferline.nvim: https://github.com/akinsho/bufferline.nvim/issues?q=is%3Aissue%20white%20background
-      })
-    end,
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("tokyonight").setup({
+  --       -- transparent = true, -- causes problems with bufferline.nvim: https://github.com/akinsho/bufferline.nvim/issues?q=is%3Aissue%20white%20background
+  --     })
+  --   end,
+  -- },
   {
     "ellisonleao/gruvbox.nvim",
     lazy = false,
