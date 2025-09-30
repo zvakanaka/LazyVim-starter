@@ -2,6 +2,9 @@ return {
   "folke/sidekick.nvim",
   opts = {
     -- add any options here
+    tools = {
+      copilot = { cmd = { "copilot" }, url = "https://github.com/github/copilot-cli" },
+    },
   },
   keys = {
     {
