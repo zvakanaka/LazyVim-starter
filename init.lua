@@ -75,7 +75,7 @@ vim.keymap.set("i", "kj", "<esc>l", { noremap = true, silent = true })
 vim.cmd("abbreviate cosnt const")
 -- vim.cmd("cnoreabbrev cl console.log(")
 
--- testOnly function to change test( to test.only( for the closest test on a line above cursor
+-- testOnly function to change test( or it( to test.only( or it.only( for the closest test on a line above cursor
 local function testOnly()
   local replaced = false
   -- loop through lines above cursor
@@ -96,6 +96,19 @@ local function testOnly()
       vim.fn.setline(i, newLine)
 
       break
+    elseif string.match(line, "it.only%(") then
+      -- display message with echom
+      vim.cmd("echom 'Removed .only from it on line " .. i .. "'")
+      replaced = true
+
+      -- from
+      --   it.only('should work correctly', async () => {
+      -- to
+      --   it('should work correctly', async () => {
+      local newLine = string.gsub(line, "it.only%(", "it(")
+      vim.fn.setline(i, newLine)
+
+      break
     end
     vim.cmd("echom 'Line " .. i .. "'") -- .. ": " .. line .. "'")
     -- if line contains test(, replace with test.only(
@@ -112,16 +125,30 @@ local function testOnly()
       vim.fn.setline(i, newLine)
 
       break
+    -- if line contains it(, replace with it.only(
+    elseif string.match(line, "it%(") then
+      -- display message with echom
+      vim.cmd("echom 'Added .only to it on line " .. i .. "'")
+      replaced = true
+
+      -- from
+      --   it('should work correctly', async () => {
+      -- to
+      --   it.only('should work correctly', async () => {
+      local newLine = string.gsub(line, "it%(", "it.only(")
+      vim.fn.setline(i, newLine)
+
+      break
     end
   end
   -- if no test found, display message with echom
   if not replaced then
-    vim.cmd("echom 'No test found to add .only to'")
+    vim.cmd("echom 'No test or it found to add .only to'")
   end
 end
--- add keymap to add .only to closest test above cursor
+-- add keymap to add .only to closest test or it above cursor
 vim.keymap.set("n", "<leader>to", testOnly, {
-  desc = "Add/remove .only to closest test above cursor",
+  desc = "Add/remove .only to closest test or it above cursor",
 })
 
 -- open new kitty window and yarn test current file
