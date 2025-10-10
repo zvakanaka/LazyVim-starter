@@ -180,3 +180,10 @@ vim.keymap.set("n", "<leader>cp", function()
 end, {
   desc = "Copy current file path to clipboard",
 })
+
+vim.keymap.set(
+  "n",
+  "<leader>tf",
+  "irequire('fs').writeFileSync(`${process.env.HOME}/Desktop/test.html`, document.body.innerHTML)<esc>F(`a",
+  { desc = "Insert fs.writeFileSync snippet" }
+)

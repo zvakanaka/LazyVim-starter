@@ -1,11 +1,5 @@
 return {
   "folke/sidekick.nvim",
-  opts = {
-    -- add any options here
-    tools = {
-      copilot = { cmd = { "copilot" }, url = "https://github.com/github/copilot-cli" },
-    },
-  },
   keys = {
     {
       "<tab>",
@@ -21,7 +15,7 @@ return {
     {
       "<leader>aa",
       function()
-        require("sidekick.cli").toggle({ focus = true })
+        require("sidekick.cli").toggle()
       end,
       desc = "Sidekick Toggle CLI",
       mode = { "n", "v" },
@@ -29,10 +23,10 @@ return {
     {
       "<leader>ap",
       function()
-        require("sidekick.cli").select_prompt()
+        require("sidekick.cli").prompt()
       end,
-      desc = "Sidekick Ask Prompt",
-      mode = { "n", "v" },
+      mode = { "n", "x" },
+      desc = "Sidekick Select Prompt",
     },
   },
 }
