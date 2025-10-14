@@ -8,9 +8,12 @@ return {
     setup = {
       eslint = function()
         require("lazyvim.util").lsp.on_attach(function(client)
+          -- vim.notify("LSP client attached: " .. client.name, vim.log.levels.INFO)
           if client.name == "eslint" then
             client.server_capabilities.documentFormattingProvider = true
           elseif client.name == "tsserver" then
+            client.server_capabilities.documentFormattingProvider = false
+          elseif client.name == "vtsls" then
             client.server_capabilities.documentFormattingProvider = false
           end
         end)
