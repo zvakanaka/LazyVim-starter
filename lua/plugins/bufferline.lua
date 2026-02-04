@@ -23,6 +23,13 @@ return {
       end,
       desc = "Delete Buffer",
     },
+    {
+      "<leader>xb",
+      function(n)
+        require("mini.bufremove").delete(n, false)
+      end,
+      desc = "Delete Buffer",
+    },
   },
   opts = {
     options = {

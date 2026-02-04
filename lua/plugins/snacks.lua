@@ -1,5 +1,6 @@
--- stylua: ignore
+-- stylua: ignore start
 -- if true then return {} end
+-- stylua: ignore end
 return {
   "folke/snacks.nvim",
   ---@type snacks.Config
@@ -17,23 +18,27 @@ return {
         },
       },
     },
-    image = {
-      -- your image configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    },
+    image = {},
     lazygit = {
-      -- your lazygit configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
+      win = {
+        width = 0.95,
+      },
+    },
   },
   keys = {
     {
       "<leader>/",
-      function() Snacks.picker.grep() end,
+      function()
+        Snacks.picker.grep()
+      end,
       desc = "Grep (excluding test/stories files)",
     },
-    { "<leader>e", function() Snacks.explorer() end, desc = "File Explorer" },
+    {
+      "<leader>e",
+      function()
+        Snacks.explorer()
+      end,
+      desc = "File Explorer",
+    },
   },
 }
