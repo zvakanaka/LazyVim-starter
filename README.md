@@ -17,6 +17,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [md-pdf.nvim](https://github.com/arminveres/md-pdf.nvim) and [img-clip.nvim](https://github.com/HakonHarnes/img-clip.nvim) for markdown preview/export (`<leader>mp`) and image pasting (`<leader>v`)
 - Toggle LSP with `<leader>ue` (`:LspStop`, `:LspStart`)
 - Toggle system dark/light mode with `<leader>ub` (toggling with this keybind is macOS only for now, but all OSs [sync with system theme](https://github.com/f-person/auto-dark-mode.nvim))
+- Toggle markdown linting with `<leader>uk` (disables/enables markdownlint-cli2 diagnostics)
 
 ## Screenshots
 
