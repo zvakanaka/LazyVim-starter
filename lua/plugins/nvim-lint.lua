@@ -10,6 +10,14 @@ return {
 
     opts.linters_by_ft.markdown = vim.g.markdown_lint_enabled and { "markdownlint-cli2" } or {}
 
+    -- Configure markdownlint-cli2 to use global config from neovim directory
+    local lint = require("lint")
+    local config_path = vim.fn.stdpath("config") .. "/markdownlint.json"
+    lint.linters["markdownlint-cli2"].args = {
+      "--config",
+      config_path,
+    }
+
     return opts
   end,
   keys = {
