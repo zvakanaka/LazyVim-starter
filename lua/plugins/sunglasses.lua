@@ -14,7 +14,6 @@ return {
       "checkhealth",
       "mason",
       -- "NvimTree",
-      -- "neo-tree",
       -- "plugin",
       -- "lazy",
       -- "TelescopePrompt",

@@ -47,8 +47,8 @@ return {
       end,
       offsets = {
         {
-          filetype = "neo-tree",
-          text = "Neo-tree",
+          filetype = "snacks_explorer",
+          text = "Explorer",
           highlight = "Directory",
           text_align = "left",
         },

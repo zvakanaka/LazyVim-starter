@@ -4,7 +4,7 @@ return {
     require("scrollview").setup(opts)
     require("scrollview.contrib.gitsigns").setup(opts)
 
-    vim.g.scrollview_excluded_filetypes = { "neo-tree", "nerdtree" }
+    vim.g.scrollview_excluded_filetypes = { "snacks_explorer", "nerdtree" }
     vim.g.scrollview_current_only = true
     vim.g.column = 120
     vim.g.scrollview_signs_on_startup =

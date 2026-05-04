@@ -9,7 +9,7 @@ return {
       "text",
       "markdown",
       "NvimTree",
-      "neo-tree",
+      "snacks_explorer",
       "lazy",
       "mason",
       "checkhealth",
