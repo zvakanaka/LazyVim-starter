@@ -38,7 +38,7 @@ return {
         -- Filter out TypeScript's unused variable diagnostics
         -- ESLint will handle these checks instead
         handlers = {
-          ["textDocument/publishDiagnostics"] = function(err, result, ctx, config)
+          ["textDocument/publishDiagnostics"] = function(err, result, ctx)
             -- Filter out diagnostic 6133 (unused variables)
             -- This prevents vtsls from conflicting with ESLint's no-unused-vars
             if result and result.diagnostics then
@@ -46,23 +46,26 @@ return {
                 return diagnostic.code ~= 6133
               end, result.diagnostics)
             end
-            vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx, config)
+            vim.lsp.diagnostic.on_publish_diagnostics(err, result, ctx)
           end,
         },
       },
     },
     setup = {
       eslint = function()
-        require("lazyvim.util").lsp.on_attach(function(client)
-          -- vim.notify("LSP client attached: " .. client.name, vim.log.levels.INFO)
-          if client.name == "eslint" then
-            client.server_capabilities.documentFormattingProvider = true
-          elseif client.name == "tsserver" then
-            client.server_capabilities.documentFormattingProvider = false
-          elseif client.name == "vtsls" then
-            client.server_capabilities.documentFormattingProvider = false
-          end
-        end)
+        vim.api.nvim_create_autocmd("LspAttach", {
+          callback = function(args)
+            local client = vim.lsp.get_client_by_id(args.data.client_id)
+            if not client then
+              return
+            end
+            if client.name == "eslint" then
+              client.server_capabilities.documentFormattingProvider = true
+            elseif client.name == "tsserver" or client.name == "vtsls" then
+              client.server_capabilities.documentFormattingProvider = false
+            end
+          end,
+        })
       end,
     },
   },

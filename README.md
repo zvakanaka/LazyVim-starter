@@ -12,7 +12,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) to highlight CSS [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-/>`](./lua/plugins/toggleterm.lua) to toggle bottom terminal, `<C-S-/>` for right side terminal (I use [Ghostty](https://zvakanaka.github.io/#../mere-blog/posts/code/ghostty.md) now, so I don't use this anymore)
-- [Copilot](https://github.com/github/copilot.vim) with the accept keybind as `<C-CR>` and `<C-L>` to accept next word
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
 - [md-pdf.nvim](https://github.com/arminveres/md-pdf.nvim) and [img-clip.nvim](https://github.com/HakonHarnes/img-clip.nvim) for markdown preview/export (`<leader>mp`) and image pasting (`<leader>v`)
 - Toggle LSP with `<leader>ue` (`:LspStop`, `:LspStart`)
@@ -141,6 +140,3 @@ To get lazygit working, you can use the [lazygit VS Code extension](https://gith
 
 </details>
 
-## Troubleshooting
-
-If Copilot stops working and you recently set up another IDE, remove the `~/.config/github-copilot` folder and run `:Copilot setup` again (see [bug](https://github.com/orgs/community/discussions/152171#discussioncomment-12324088)).
