@@ -6,7 +6,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 ## What's so Special About this Starter?
 
 - [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has [diagnostics/linting](./lua/config/lazy.lua#L14) with its [formatting disabled](./lua/plugins/lspconfig.lua)
-- [Gruvbox](https://github.com/morhetz/gruvbox) theme - I think it's comfortable on the eyes (customize [here](./lua/plugins/colorscheme.lua))
+- [Gruvbox](https://github.com/morhetz/gruvbox) theme - I think it's comfortable on the eyes (customize [here](./lua/plugins/colorscheme.lua), set [here](./lua/config/lazy.lua#L20))
 - Absolute line numbers ([relative line numbers disabled](./init.lua#L11))
 - Automatic updates disabled (`<leader>l` then `U` to update manually)
 - [git-blame.nvim](https://github.com/f-person/git-blame.nvim)
