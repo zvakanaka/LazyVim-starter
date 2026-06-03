@@ -14,7 +14,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
 - Autoformat on save disabled by default — toggle with `<leader>uf`, format manually with `<leader>cf`
 - Toggle LSP with `<leader>ue` (`:LspStop`, `:LspStart`)
-- Toggle markdown linting with `<leader>uk` (disables/enables markdownlint-cli2 diagnostics)
+
 - [snacks.nvim explorer](https://github.com/folke/snacks.nvim/blob/main/docs/explorer.md) (`<leader>e`) replaces NerdTree
 
 ## Screenshots

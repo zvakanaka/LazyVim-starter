@@ -10,4 +10,5 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "stevearc/aerial.nvim", enabled = false },
   { "ahmedkhalf/project.nvim", enabled = false },
+  { "williamboman/mason-lspconfig.nvim", enabled = false },
 }
