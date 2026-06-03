@@ -1,5 +1,6 @@
 return {
   "dstein64/nvim-scrollview",
+  commit = "0efc4e82094dbda2e411f7c8d44928716d00b655",
   config = function(_, opts)
     require("scrollview").setup(opts)
     require("scrollview.contrib.gitsigns").setup(opts)

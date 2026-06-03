@@ -5,7 +5,6 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 ## What's so Special About this Starter?
 
-- [ESLint](https://www.lazyvim.org/extras/linting/eslint) formats on save and [typescript-language-server](https://github.com/typescript-language-server/typescript-language-server) has [diagnostics/linting](./lua/config/lazy.lua#L14) with its [formatting disabled](./lua/plugins/lspconfig.lua)
 - [Gruvbox](https://github.com/morhetz/gruvbox) theme - I think it's comfortable on the eyes (customize [here](./lua/plugins/colorscheme.lua), set [here](./lua/config/lazy.lua#L20))
 - Absolute line numbers ([relative line numbers disabled](./init.lua#L11))
 - Automatic updates disabled (`<leader>l` then `U` to update manually)
@@ -13,10 +12,10 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua) to highlight CSS [colors](https://developer.mozilla.org/en-US/docs/Web/CSS/named-color)
 - [ToggleTerm](https://github.com/akinsho/toggleterm.nvim) with [`<C-/>`](./lua/plugins/toggleterm.lua) to toggle bottom terminal, `<C-S-/>` for right side terminal (I use [Ghostty](https://zvakanaka.github.io/#../mere-blog/posts/code/ghostty.md) now, so I don't use this anymore)
 - [nvim-scrollview](https://github.com/dstein64/nvim-scrollview) interactive scrollbar with signs (git diff, diagnostics, etc.)
-- [md-pdf.nvim](https://github.com/arminveres/md-pdf.nvim) and [img-clip.nvim](https://github.com/HakonHarnes/img-clip.nvim) for markdown preview/export (`<leader>mp`) and image pasting (`<leader>v`)
+- Autoformat on save disabled by default — toggle with `<leader>uf`, format manually with `<leader>cf`
 - Toggle LSP with `<leader>ue` (`:LspStop`, `:LspStart`)
-- Toggle system dark/light mode with `<leader>ub` (toggling with this keybind is macOS only for now, but all OSs [sync with system theme](https://github.com/f-person/auto-dark-mode.nvim))
 - Toggle markdown linting with `<leader>uk` (disables/enables markdownlint-cli2 diagnostics)
+- [snacks.nvim explorer](https://github.com/folke/snacks.nvim/blob/main/docs/explorer.md) (`<leader>e`) replaces NerdTree
 
 ## Screenshots
 
